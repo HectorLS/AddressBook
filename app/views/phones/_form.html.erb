@@ -1,0 +1,6 @@
+<%= form_for [@contact, @phone] do |f| %>
+	<%= f.label :number %>
+	<%= f.text_field :number, placeholder: "666999666" %>
+	<br>
+	<%= f.submit 'Add phone' %>
+<% end %>

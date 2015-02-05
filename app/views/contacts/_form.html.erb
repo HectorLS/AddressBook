@@ -1,0 +1,9 @@
+<%= form_for [@contact] do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name, placeholder: "Your name" %>
+	<br>
+	<%= f.label :address %>
+	<%= f.text_field :address, placeholder: "C/ Your Street" %>
+	<br>
+	<%= f.submit 'Add contact' %>
+<% end %>

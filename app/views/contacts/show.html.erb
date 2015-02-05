@@ -1,0 +1,19 @@
+<h2>Contact datas</h2>
+
+<ul>
+	<li>
+		<h3><%= @contact.name %></h3>
+		<span><%= @contact.address %></span>
+
+		<% @contact.phones.each do |phone| %>
+			<li><%= phone.number %></li> 
+		<% end %>
+
+		<% @contact.emails.each do |email| %>
+			<li><%= email.e_address %></li> 
+		<% end %>
+	</li>
+</ul>
+
+
+<span><%= link_to("Back to contacts", contacts_path)%></span>	

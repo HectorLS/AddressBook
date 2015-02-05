@@ -1,0 +1,6 @@
+<%= form_for [@contact, @email] do |f| %>
+	<%= f.label :e_address %>
+	<%= f.text_field :e_address, placeholder: "Your email example@example.com" %>
+	<br>
+	<%= f.submit 'Add email' %>
+<% end %>
