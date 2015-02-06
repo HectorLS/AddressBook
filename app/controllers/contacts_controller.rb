@@ -30,10 +30,10 @@ class ContactsController < ApplicationController
 	end
 
 	def search
-		@contact = Contact.search(params[:search])
+		@contacts = Contact.search(params[:search])
 		render 'index'
-
 	end
+
 
 	def destroy
 	end

@@ -1,14 +1,15 @@
 <h2>Contact List</h2>
 
 
-<span>Search Contact </span><input type="search" placeholder="Name of the contact">
 <h3><%= link_to("Add new contact", new_contact_path) %></h3>
 
-	<%= form_tag(contact.name) do %>
-	  <%= label_tag(:name) %>
-	  <%= text_field_tag(:name) %>
-	  <%= submit_tag("Search") %>
-	<% end %>
+<%= form_tag search_path do %>
+	<p>
+		<%= text_field_tag :search %>
+		<%= submit_tag "Search", :name => nil %>
+	</p>
+<% end %>
+
 
 <ul>
 	<% @contacts.each do |contact| %>
